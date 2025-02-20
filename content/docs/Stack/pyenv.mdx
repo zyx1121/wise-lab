@@ -1,0 +1,62 @@
+---
+title: pyenv
+description: pyenv 是一個強大的 Python 版本管理工具，讓您能夠在同一台電腦上安裝和切換不同版本的 Python。
+---
+
+## Installation
+
+1. 透過 Homebrew 或 Curl 安裝 pyenv
+
+   - Linux/Unix
+
+   ```bash
+   curl -fsSL https://pyenv.run | bash
+   ```
+
+   - MacOS
+
+   ```bash
+   brew install pyenv
+   ```
+
+2. 設置 pyenv 環境變量
+
+   - Bash
+
+   ```bash
+   echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+   echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+   echo 'eval "$(pyenv init - bash)"' >> ~/.bashrc
+   ```
+
+   - Zsh
+
+   ```bash
+   echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+   echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+   echo 'eval "$(pyenv init - zsh)"' >> ~/.zshrc
+   ```
+
+## Usage
+
+### 透過 pyenv 安裝指定 Python 版本
+
+```bash
+pyenv install 3.12.8
+```
+
+### 查看已安裝的 Python 版本
+
+```bash
+pyenv versions
+```
+
+### 設置 Python 版本
+
+```bash
+pyenv global 3.12.8
+```
+
+```bash
+pyenv local 3.12.8
+```
